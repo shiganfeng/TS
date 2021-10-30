@@ -57,14 +57,35 @@
 //     return a+b+c+d
 // }
 // console.log(sum(1,2,3,4))
-function sum(a:number, ...result:number[]):number {
-    return a+result.reduce((pre, cur) => {
-        return pre + cur
-    }, 0)
-}
-console.log(sum(10,1,2,3,4,5))//等价于a=10, result=[1,2,3,4,5]
+// function sum(a:number, ...result:number[]):number {
+//     return a+result.reduce((pre, cur, str, arr) => {
+//         console.log('pre:', pre)
+//         console.log('cur:', cur)
+//         console.log('str:', str)
+//         console.log('arr:', arr)
+//         return pre + cur
+//     }, 0)
+// }
+// console.log(sum(10,1,2,3,4,5))//等价于a=10, result=[1,2,3,4,5]
 
 //函数重载
-//typescript中的重载，通过为同一个函数提供多个函数类型定义来试下多种功能的目的
+//typescript中的重载，通过为同一个函数提供多个函数类型定义来实现多种功能的目的
 
+// function getInfo(name:string):string
 
+// function getInfo(age:number):string
+
+// function getInfo(str:any):any{
+//     if(typeof str === 'string'){
+//         return str
+//     }else{
+//         return 100
+//     }
+// }
+
+// console.log(getInfo(20))
+
+// //箭头函数
+setTimeout(()=> {
+    console.log(111)
+})
