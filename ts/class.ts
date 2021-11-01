@@ -251,30 +251,30 @@
 //abstract 抽象方法只能放在抽象类里面
 
 //抽象类和抽象方法用来定义标准  Animal 这个类要求它的子类必须包含eat方法
-abstract class Animal {
-    public name:string
+// abstract class Animal {
+//     public name:string
 
-    constructor(name:string) {
-        this.name = name
-    }
+//     constructor(name:string) {
+//         this.name = name
+//     }
     
-    abstract eat():any
-}
+//     abstract eat():any
+// }
 
-// var a = new Animal() /* 抽象类无法实例化 */
+// // var a = new Animal() /* 抽象类无法实例化 */
 
-class Dog extends Animal {
-    //抽象类的子类必须实现抽象类里面的抽象方法
+// class Dog extends Animal {
+//     //抽象类的子类必须实现抽象类里面的抽象方法
 
-    constructor(name:string){
-        super(name)
-    }
+//     constructor(name:string){
+//         super(name)
+//     }
 
-    eat(){
-        console.log(this.name+'吃粮食')
-    }
-}
+//     eat(){
+//         console.log(this.name+'吃粮食')
+//     }
+// }
 
-var d = new Dog('小白')
-d.eat()
+// var d = new Dog('小白')
+// d.eat()
 
