@@ -308,71 +308,71 @@
 
 
 /*  */
-interface DBI<T>{
-    add(info:T):boolean;
-    update(info:T, id:number):boolean;
-    delete(id:number):boolean;
-    get(id:number):any[];
-}
-//要实现泛型接口，这个类也应该是一个泛型类
-class MySqlb<T> implements DBI<T>{
-    add(info: T): boolean {
-        console.log(info)
-        return true
-    }
-    update(info: T, id: number): boolean {
-        return true
-    }
-    delete(id: number): boolean {
-        return true
-    }
-    get(id: number): any[] {
-        return []
-    }
+// interface DBI<T>{
+//     add(info:T):boolean;
+//     update(info:T, id:number):boolean;
+//     delete(id:number):boolean;
+//     get(id:number):any[];
+// }
+// //要实现泛型接口，这个类也应该是一个泛型类
+// class MySqlb<T> implements DBI<T>{
+//     add(info: T): boolean {
+//         console.log(info)
+//         return true
+//     }
+//     update(info: T, id: number): boolean {
+//         return true
+//     }
+//     delete(id: number): boolean {
+//         return true
+//     }
+//     get(id: number): any[] {
+//         return []
+//     }
     
-}
+// }
 
-class MsSqlDb<T> implements DBI<T>{
-    add(info: T): boolean {
-        console.log(info)
-        return true
-    }
-    update(info: T, id: number): boolean {
-        return true
-    }
-    delete(id: number): boolean {
-        return true
-    }
-    get(id: number): any[] {
-        return []
-    }
+// class MsSqlDb<T> implements DBI<T>{
+//     add(info: T): boolean {
+//         console.log(info)
+//         return true
+//     }
+//     update(info: T, id: number): boolean {
+//         return true
+//     }
+//     delete(id: number): boolean {
+//         return true
+//     }
+//     get(id: number): any[] {
+//         return []
+//     }
     
-}
+// }
 
-//操作用户表  定义一个User类和数据表做映射
-class User{
-    username:string | undefined;
-    password:string | undefined;
-    constructor(params:{
-        username:string | undefined;
-        password:string | undefined;
-    }){
-        this.username = params.username
-        this.password = params.password
-    }
-}
+// //操作用户表  定义一个User类和数据表做映射
+// class User{
+//     username:string | undefined;
+//     password:string | undefined;
+//     constructor(params:{
+//         username:string | undefined;
+//         password:string | undefined;
+//     }){
+//         this.username = params.username
+//         this.password = params.password
+//     }
+// }
 
 
-let u = new User({
-    username: 'sgf',
-    password: '123'
-})
+// let u = new User({
+//     username: 'sgf',
+//     password: '123'
+// })
 
-let oMysql = new MySqlb<User>() //类作为参数来约束传入的类型
-oMysql.add(u)
+// let oMysql = new MySqlb<User>() //类作为参数来约束传入的类型
+// oMysql.add(u)
 
-let oMssql = new MsSqlDb<User>()
-oMssql.add(u)
+// let oMssql = new MsSqlDb<User>()
+// oMssql.add(u)
 
 
     
