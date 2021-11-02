@@ -7,7 +7,7 @@
 // console.log(a)
 
 //字符串类型(string)
-// let str = '123'
+// let str:string = '123'
 // console.log(str)
 
 //第一种定义数组的方式
@@ -27,7 +27,8 @@
 // console.log(arr)
 
 //元祖类型(tuple) 属于数组的一种
-// let arr:[string, number, boolean] = ['1', 1, true]
+// let arr:[string, number, boolean]
+// arr  = ['1', 1, true]
 // console.log(arr)
 
 //枚举类型

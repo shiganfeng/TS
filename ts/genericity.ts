@@ -69,7 +69,9 @@ class MinClass<T> {
     }
 }
 
-let mymin = new MinClass<string>() //实例化类，并且制定了类的T代表的类型是string
-mymin.add('1')
-mymin.add('2')
+let mymin = new MinClass<number>() //实例化类，并且制定了类的T代表的类型是number
+mymin.add(4)
+mymin.add(3)
+mymin.add(1)
+console.log(mymin.min())
 
